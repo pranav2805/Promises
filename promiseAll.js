@@ -3,6 +3,8 @@ const posts = [
     { title: 'Post two', body:'This is post two'},
 ];
 
+console.log("Before making any changes time:", new Date());
+
 const user = {
     name: 'Pranav',
     lastActivity: new Date()
@@ -29,7 +31,7 @@ function createPost() {
 function updateLastUserActivityTime() {
     return new Promise((resolve,reject)=>{
         setTimeout(()=>{
-            lastActivity = new Date();
+            user.lastActivity = new Date();
             resolve();
         },1000)
     })
